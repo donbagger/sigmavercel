@@ -1,0 +1,251 @@
+body {
+    background-image: url('images/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+.grid-container {
+    
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+    align-items: center;
+}
+
+form {
+    grid-column: 2 / 3;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.question {
+    margin-top: 30px;
+    border: 1px solid white;;
+    border-radius:20px;
+    background-color: rgba(139, 113, 157, 0.8);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5)
+}
+
+#tricky-box {
+    position: relative;
+    overflow: visible;
+
+}
+
+
+
+.quest{
+    font-size: 18px;
+    font-weight:bold;
+    padding:20px;
+    margin-left:20px;
+    margin-right:20px;
+}
+.answer {
+    padding: 10px 10px;
+    font-size: 15px;
+    margin: 10px;
+    margin-bottom:30px;
+    color:black;
+    cursor: pointer;
+    border: 1px solid #333;
+    background-color: #dac8e0;
+    border-radius: 5px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1)
+    
+}
+
+button.answer.selected {
+    background-color: #48265a; 
+    color: white;
+    border: 2px solid #2c1737;
+    box-shadow:5px 5px 5px #c296d9;
+
+}
+
+.answer:hover {
+    background-color: #ccc;
+}
+
+header {
+    position: relative;
+}
+
+.floating-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    opacity: 0.8;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 100; 
+    border: #ccc;
+}
+.floating-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: #ccc;
+    border-radius: 5%;
+}
+.floating-menu ul li {
+    display: inline;
+    margin: 0 20px;
+    border: #ccc;
+
+}
+
+.submit-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top:20px;
+}
+
+#reset-button {
+    display:none;
+    height:50px;
+    margin-top: 20px; 
+    margin-bottom: 40px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-align:center;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#good-answers-button {
+    display:none;
+    height:50px;
+    margin-top: 20px; 
+    margin-bottom: 40px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-align:center;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#finish-alert {
+    display:none;
+    font-size: 25px;
+    color:red;
+    align-items:center;
+}
+
+#result {
+    background-color:#bbb;
+    display: none;
+    font-size: 18px;
+    margin: 0; 
+    color: #333;
+    padding:20px;
+    height:auto;
+    line-height:0px;
+    border-radius:5px;
+    text-align:center;
+    margin-bottom:20px;
+    
+}
+
+#submit-button {
+    height:50px;
+    margin-top: 20px; 
+    margin-bottom: 40px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-align:center;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#surprise-image {
+    position: absolute;
+    top: 50%; /* Start from the middle vertically */
+    left: 50%; /* Start from the middle horizontally */
+    transform: translate(-50%, -50%) rotate(0deg); /* Initially centered and no rotation */
+    width: 150px;
+    transition: all 5s ease;
+    opacity: 0; /* Hidden initially */
+    z-index: -1;
+}
+
+#tricky-box:hover #surprise-image {
+    left: -140px; /* Move the image to the left side */
+    transform: translateY(-50%) rotate(-90deg); /* Slide out while rotating */
+    opacity: 1; /* Make the image visible */
+}
+
+#tricky-box {
+    background-color: rgba(139, 113, 157, 1);
+}
+
+
+
+.floating-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.floating-menu ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 100px 20px;
+    margin-top: 50px;
+}
+
+#section1 {
+    background-color: #f4f4f4;
+}
+
+#section2 {
+    background-color: #ddd;
+}
+
+#section3 {
+    background-color: #bbb;
+}
+
+#correct-answer {
+    margin-bottom:50px;
+}
+
+
+
+#king {
+    display:none;
+    align-items:center;
+
+}
+
+#king.celebration {
+    transform: scale(0.5);
+    display:block;
+    position:absolute;
+    left:59%;
+    margin-top:33%;
+    transition: all 3s ease;
+
+}

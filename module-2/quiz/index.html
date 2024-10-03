@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz</title>
+    <link rel="stylesheet" href="style.css" >
+</head>
+<body>
+   
+    <header>
+        <div class="floating-menu" id="floatingMenu">
+            <nav>
+                <ul>
+                    <li><a href="#section1">L1 Quiz</a></li>
+                    <li><a href="#section2">League of Legends Quiz (soon...)</a></li>
+                    <li><a href="#section3">Incoming</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="grid-container">
+    
+<form> 
+    <h1 style="color:#dac8e0">One and only correct crypto quiz!</h1>
+    
+    <div class="question">
+        <p class="quest">What does TPS mean?</p>
+        
+            <button type="button" class="answer" >Tendermint Protocol Software</button>
+            <button type="button" class="answer" data-correct="true">Transactions per second</button>
+            <button type="button" class="answer" >Tender Popcorn Strips</button>
+
+        </div> 
+        
+        <div class="question">
+    <p class="quest">What's the group of cryptocurrencies that have tied ("pegged") their value to the underlying asset such as national currencies?</p>
+    
+    <button type="button" class="answer" >Bitcoins</button>
+    <button type="button" class="answer" data-correct="true">Stablecoins</button>
+    <button type="button" class="answer" >Pegcoins</button>
+    <button type="button" class="answer" >Memecoins</button>
+    </div>
+
+    <div class="question">
+        <p class="quest">What's Blockchain?</p>
+        
+        <button type="button" class="answer" data-correct="true">Digital ledger where data is stored on a network of independent computers</button>
+        <button type="button" class="answer" >A digital ledger that is created and managed by a company but is made available to the public</button>
+        <button type="button" class="answer" >A type of computer created for bitcoin mining</button>
+        <button type="button" class="answer" >A government-facilitated platform for currency exchange</button>
+        </div>
+
+    <div class="question">
+            <p class="quest">The smallest unit of a dollar is a cent. What's the smallet unit of Bitcoin called?</p>
+            
+            <button type="button" class="answer" >Lamport</button>
+            <button type="button" class="answer" >Wei</button>
+            <button type="button" class="answer" data-correct="true">Satoshi</button>
+            <button type="button" class="answer" >Gwei</button>
+            </div>
+
+            <div class="question">
+                <p class="quest">What's the name of a document that describes features of a given cryptocurrency, like Bitcoin?</p>
+                
+                <button type="button" class="answer" >Organepaper</button>
+                <button type="button" class="answer" >Blackpaper</button>
+                <button type="button" class="answer" data-correct="true">Whitepaper</button>
+                <button type="button" class="answer" >Bluepaper</button>
+                </div>
+
+     <div class="question">
+                    <p class="quest">What does "rugpulled" means?</p>
+                    
+                    <button type="button" class="answer" >Generously gifted by the project founders</button>
+                    <button type="button" class="answer" data-correct="true" >Scammed</button>
+                    <button type="button" class="answer" >Pulling out of the deal that consisted sale of a rug</button>
+                    </div>
+
+         <div class="question">
+                        <p class="quest">Pick an answer that consists only DAPPs:</p>
+                        
+                        <button type="button" class="answer" >Uniswap, Binance, Jupiter</button>
+                        <button type="button" class="answer" >Aave, Uniswap, Coinbase</button>
+                        <button type="button" class="answer" data-correct="true">Jupiter, 1inch, Aave</button>
+                        <button type="button" class="answer" >JP Morgan, Blackrock, Bridgewater</button>
+                        </div>
+
+                        <div class="question" id="tricky-box">
+                            <p class="quest">And finally... What's the better L1?</p>
+                                <button type="button" id="correct-answer" class="answer" data-correct="true">Solana</button>
+                                <button type="button" id="runaway-answer" class="answer">Ethereum</button>
+                                <img src="images/toly.png" alt="Surprise Image" id="surprise-image">
+                            </div>
+
+<p id="finish-alert">Finish your test!</p>
+<img src="images/king.jpg" alt="you dropped this" id="king">
+<div class="submit-box">
+    <button type="button" class="submit-button" id="reset-button" onclick="window.location.href = 'index.html';">Try Again!</button>
+<button type="button" class="submit-buton" id="submit-button">Check your score!</button>
+<p id="result"> Result</p>
+<button type="button" class="submit-button" id="good-answers-button">Show good answers</button>
+</form>
+</div>
+</div>
+<img src="images/king.jpg" alt="you dropped this" id="king">
+
+
+    <script src="script.js"> </script>
+</body>
+</html>
