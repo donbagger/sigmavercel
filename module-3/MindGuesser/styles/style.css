@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #d9effa;
+    --secondary-color: #cceffa;
+  }
+
+body {
+    
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:var(--primary-color)
+}
+
+
+
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color:var(--secondary-color)
+ 
+}
+
+.info {
+    
+    margin-top: 20px;
+    text-align:center;
+    margin-bottom:10px;
+    padding:50px;
+}
+.lane {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.pattern-container {
+    display:space-around;
+    background-color: #e0e0e0;
+    padding-right:100px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width: auto;
+    text-align: center;
+}
+
+.cars-row {
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    padding: 10px;
+    border-radius: 5px;
+    height:auto;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color:var(--primary-color)
+}
+
+.attempts {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 700px; /* Keeps the width flexible but with a max constraint */
+    margin: 0 auto;
+}
+
+.attempt {
+    display: none;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+.points {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100px;
+}
+
+.points-color, .points-position {
+    display:flex;
+    align-items:center;
+    text-align:center;
+    width: 100%;
+    height: 100%;
+    background-color:var(--primary-color);
+    margin-bottom: 10px;
+    font-size:smaller;
+    padding:10px;
+    margin-left:5px;
+    border: 1px solid #cae8ff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+.guess-button, .start-button, .play-again-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.guess-button {
+    display:none;
+    margin-bottom:10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#play-again-button {
+    display:none;
+    margin-bottom:10px;
+}
+
+.guess-button:hover, .start-button:hover {
+    background-color: #218838;
+}
+
+.start-button {
+    margin-bottom: 20px;
+}
+
+.car-dropdown {
+    width:80px;
+    font-size: 16px;
+    padding:5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.car-dropdown option {
+    padding: 5px;
+    font-size: 16px;
+}
+
+/* Style the dropdowns within the row to be aligned horizontally */
+.cars-row {
+    display: flex;
+    justify-content: space-around;
+    width:100%;
+    max-width:600px;
+    align-items: center;
+    height:105px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color:var(--primary-color);
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.car-image  {
+    width: 75px;
+    height: auto;
+    display:block;
+    
+   
+}
+
+.car-image-hidden {
+
+    width:75px;
+}
+
+.attempt.show {
+    display: flex;
+}
+
+#pattern-container {
+    display:none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color:var(--primary-color);
+}
+
+#pattern {
+    padding:0;
+    box-shadow:none;
+
+}

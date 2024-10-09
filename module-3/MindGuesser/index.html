@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarsGame</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    
+    <div class="game">
+        <p class="info"> Your task is to guess the correct position and colors of the cars hidden on the bottom row. You have 10 attempts, before you lose! After each guess, press the Guess button to check if you are getting closer!</p>
+        <button class="start-button" id="start-button">Start the Game!</button>
+        
+        <div class="lane">
+            <!-- User Attempts -->
+            <div class="attempts">
+                
+                <div class="attempt" id="attempt-1">
+                    <div class="cars-row" id="try-1">  
+                        <select class="car-dropdown" name="car1" id="car1-try1">
+                            <option value="">Select a car </option>
+                            <option value="green" > Green</option>
+                            <option value="red"> Red</option>
+                            <option value="yellow"> Yellow</option>
+                            <option value="pink"> Pink</option>
+                            <option value="blue"> Blue</option>
+                            <option value="orange"> Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car2" id="car2-try1">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car3" id="car3-try1">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car4" id="car4-try1">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                    </div>
+                    <div class="points">
+                        <div class="points-color" id="points-color-1"></div>
+                        <div class="points-position" id="points-position-1"></div>
+                    </div>
+                </div>
+                <div class="attempt" id="attempt-2">
+                    <div class="cars-row" id="try-2">
+                        <select class="car-dropdown" name="car1" id="car1-try2">
+                            <option value="">Select a car </option>
+                            <option value="green"> green</option>
+                            <option value="red"> Red</option>
+                            <option value="yellow"> Yellow</option>
+                            <option value="pink"> Pink</option>
+                            <option value="blue"> Blue</option>
+                            <option value="orange"> Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car2" id="car2-try2">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car3" id="car3-try2">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car4" id="car4-try2">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                    </div>
+                    <div class="points">
+                        <div class="points-color" id="points-color-2"></div>
+                        <div class="points-position" id="points-position-2"></div>
+                    </div>
+                </div>
+                <div class="attempt" id="attempt-3">
+                    <div class="cars-row" id="try-3">
+                        <select class="car-dropdown" name="car1" id="car1-try3">
+                            <option value="">Select a car </option>
+                            <option value="green"> green</option>
+                            <option value="red"> Red</option>
+                            <option value="yellow"> Yellow</option>
+                            <option value="pink"> Pink</option>
+                            <option value="blue"> Blue</option>
+                            <option value="orange"> Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car2" id="car2-try3">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car3" id="car3-try3">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car4" id="car4-try3">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                    </div>
+                    <div class="points">
+                        <div class="points-color" id="points-color-3"></div>
+                        <div class="points-position" id="points-position-3"></div>
+                    </div>
+                </div>
+                <div class="attempt" id="attempt-4">
+                    <div class="cars-row" id="try-4">
+                        <select class="car-dropdown" name="car1" id="car1-try4">
+                            <option value="">Select a car </option>
+                            <option value="green"> green</option>
+                            <option value="red"> Red</option>
+                            <option value="yellow"> Yellow</option>
+                            <option value="pink"> Pink</option>
+                            <option value="blue"> Blue</option>
+                            <option value="orange"> Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car2" id="car2-try4">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car3" id="car3-try4">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car4" id="car4-try4">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                    </div>
+                    <div class="points">
+                        <div class="points-color" id="points-color-4"></div>
+                        <div class="points-position" id="points-position-4"></div>
+                    </div>
+                </div>
+                <div class="attempt" id="attempt-5">
+                    <div class="cars-row" id="try-5"> <select class="car-dropdown" name="car1" id="car1-try5">
+                        <option value="">Select a car </option>
+                        <option value="green"> green</option>
+                        <option value="red"> Red</option>
+                        <option value="yellow"> Yellow</option>
+                        <option value="pink"> Pink</option>
+                        <option value="blue"> Blue</option>
+                        <option value="orange"> Orange</option>
+                    </select>
+                    <select class="car-dropdown" name="car2" id="car2-try5">
+                        <option value="">Select a car</option>
+                        <option value="green">Green</option>
+                        <option value="red">Red</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="pink">Pink</option>
+                        <option value="blue">Blue</option>
+                        <option value="orange">Orange</option>
+                    </select>
+                    <select class="car-dropdown" name="car3" id="car3-try5">
+                        <option value="">Select a car</option>
+                        <option value="green">Green</option>
+                        <option value="red">Red</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="pink">Pink</option>
+                        <option value="blue">Blue</option>
+                        <option value="orange">Orange</option>
+                    </select>
+                    <select class="car-dropdown" name="car4" id="car4-try5">
+                        <option value="">Select a car</option>
+                        <option value="green">Green</option>
+                        <option value="red">Red</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="pink">Pink</option>
+                        <option value="blue">Blue</option>
+                        <option value="orange">Orange</option>
+                    </select></div>
+                    <div class="points">
+                        <div class="points-color" id="points-color-5"></div>
+                        <div class="points-position" id="points-position-5"></div>
+                    </div>
+                </div>
+                <div class="attempt" id="attempt-6">
+                    <div class="cars-row" id="try-6">
+                        <select class="car-dropdown" name="car1" id="car1-try6">
+                            <option value="">Select a car </option>
+                            <option value="green"> green</option>
+                            <option value="red"> Red</option>
+                            <option value="yellow"> Yellow</option>
+                            <option value="pink"> Pink</option>
+                            <option value="blue"> Blue</option>
+                            <option value="orange"> Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car2" id="car2-try6">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car3" id="car3-try6">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car4" id="car4-try6">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                    </div>
+                    <div class="points">
+                        <div class="points-color" id="points-color-6"></div>
+                        <div class="points-position" id="points-position-6"></div>
+                    </div>
+                </div>
+                <div class="attempt" id="attempt-7">
+                    <div class="cars-row" id="try-7">
+                        <select class="car-dropdown" name="car1" id="car1-try7">
+                            <option value="">Select a car </option>
+                            <option value="green"> green</option>
+                            <option value="red"> Red</option>
+                            <option value="yellow"> Yellow</option>
+                            <option value="pink"> Pink</option>
+                            <option value="blue"> Blue</option>
+                            <option value="orange"> Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car2" id="car2-try7">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car3" id="car3-try7">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car4" id="car4-try7">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                    </div>
+                    <div class="points">
+                        <div class="points-color" id="points-color-7"></div>
+                        <div class="points-position" id="points-position-7"></div>
+                    </div>
+                </div>
+                <div class="attempt" id="attempt-8">
+                    <div class="cars-row" id="try-8">
+                        <select class="car-dropdown" name="car1" id="car1-try8">
+                            <option value="">Select a car </option>
+                            <option value="green"> green</option>
+                            <option value="red"> Red</option>
+                            <option value="yellow"> Yellow</option>
+                            <option value="pink"> Pink</option>
+                            <option value="blue"> Blue</option>
+                            <option value="orange"> Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car2" id="car2-try8">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car3" id="car3-try8">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car4" id="car4-try8">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                    </div>
+                    <div class="points">
+                        <div class="points-color" id="points-color-8"></div>
+                        <div class="points-position" id="points-position-8"></div>
+                    </div>
+                </div>
+                <div class="attempt" id="attempt-9">
+                    <div class="cars-row" id="try-9">
+                        <select class="car-dropdown" name="car1" id="car1-try9">
+                            <option value="">Select a car </option>
+                            <option value="green"> green</option>
+                            <option value="red"> Red</option>
+                            <option value="yellow"> Yellow</option>
+                            <option value="pink"> Pink</option>
+                            <option value="blue"> Blue</option>
+                            <option value="orange"> Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car2" id="car2-try9">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car3" id="car3-try9">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car4" id="car4-try9">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                    </div>
+                    <div class="points">
+                        <div class="points-color" id="points-color-9"></div>
+                        <div class="points-position" id="points-position-9"></div>
+                    </div>
+                </div>
+                <div class="attempt" id="attempt-10">
+                    <div class="cars-row" id="try-10">
+                        <select class="car-dropdown" name="car1" id="car1-try10">
+                            <option value="">Select a car </option>
+                            <option value="green"> green</option>
+                            <option value="red"> Red</option>
+                            <option value="yellow"> Yellow</option>
+                            <option value="pink"> Pink</option>
+                            <option value="blue"> Blue</option>
+                            <option value="orange"> Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car2" id="car2-try10">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car3" id="car3-try10">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                        <select class="car-dropdown" name="car4" id="car4-try10">
+                            <option value="">Select a car</option>
+                            <option value="green">Green</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="pink">Pink</option>
+                            <option value="blue">Blue</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                    </div>
+                    <div class="points">
+                        <div class="points-color" id="points-color-10"></div>
+                        <div class="points-position" id="points-position-10"></div>
+                    </div>
+                </div>
+                <!-- Pattern -->
+                <div class="pattern-container" id="pattern-container">
+                    <div class="cars-row" id="pattern"></div>
+                </div>
+            </div>
+            <button class="guess-button" id="guess-button">Submit Guess</button>
+            <button class="play-again-button" id="play-again-button" onClick="window.location.reload()">Play Again!</button>
+        </div>
+       
+        
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
