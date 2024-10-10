@@ -62,6 +62,13 @@ button.answer.selected {
     margin-bottom:10px;
     padding:50px;
 }
+
+.difficulty-question {
+    
+    text-align:center;
+    margin-bottom:10px;
+
+}
 .lane {
     display: flex;
     flex-direction: column;
@@ -157,6 +164,29 @@ button.answer.selected {
 
 .start-button {
     margin-bottom: 20px;
+    display:none;
+}
+
+.selected {
+    background-color: #48265a; 
+    color: white;
+    border: 2px solid #2c1737;
+    box-shadow:5px 5px 5px 0.5 #c296d9;
+
+}
+
+.diff {
+    padding: 10px 10px;
+    font-size: 15px;
+    margin: 10px;
+    margin-bottom:30px;
+    color:black;
+    cursor: pointer;
+    border: 1px solid #333;
+    background-color: #daebf4;
+    border-radius: 5px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1)
+    
 }
 
 .car-dropdown {
@@ -215,5 +245,13 @@ button.answer.selected {
 #pattern {
     padding:0;
     box-shadow:none;
+
+}
+
+.selected {
+    background-color: var(--primary-color); 
+    color: black;
+    border: 2px solid #2c1737;
+    box-shadow:5px 5px 5px 0.5 #c296d9;
 
 }

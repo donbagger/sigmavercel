@@ -11,12 +11,12 @@
     
     <div class="game">
         <p class="info"> Your task is to guess the correct position and colors of the cars hidden on the bottom row. You have 10 attempts, before you lose! After each guess, press the Guess button to check if you are getting closer!</p>
-        <div class="difficulty">
+        <div class="difficulty" id="diffDiv">
             <p class="difficulty-question">First, choose your difficulty:</p>
             
-                <button type="button" class="answer" >Normal (6 colors)</button>
-                <button type="button" class="answer" >Hard (7 colors)</button>
-                <button type="button" class="answer" >Impossible (8 colors)</button>
+                <button type="button" class="diff" id="diffNormal">Normal (6 colors)</button>
+                <button type="button" class="diff" id="diffHard">Hard (7 colors)</button>
+                <button type="button" class="diff" id="diffImpossible">Impossible (8 colors)</button>
     
             </div> 
         
@@ -36,6 +36,8 @@
                             <option value="pink"> Pink</option>
                             <option value="blue"> Blue</option>
                             <option value="orange"> Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car2" id="car2-try1">
                             <option value="">Select a car</option>
@@ -45,6 +47,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car3" id="car3-try1">
                             <option value="">Select a car</option>
@@ -54,6 +58,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car4" id="car4-try1">
                             <option value="">Select a car</option>
@@ -63,6 +69,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                     </div>
                     <div class="points">
@@ -80,6 +88,8 @@
                             <option value="pink"> Pink</option>
                             <option value="blue"> Blue</option>
                             <option value="orange"> Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car2" id="car2-try2">
                             <option value="">Select a car</option>
@@ -89,6 +99,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car3" id="car3-try2">
                             <option value="">Select a car</option>
@@ -98,6 +110,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car4" id="car4-try2">
                             <option value="">Select a car</option>
@@ -107,6 +121,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                     </div>
                     <div class="points">
@@ -124,6 +140,8 @@
                             <option value="pink"> Pink</option>
                             <option value="blue"> Blue</option>
                             <option value="orange"> Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car2" id="car2-try3">
                             <option value="">Select a car</option>
@@ -133,6 +151,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car3" id="car3-try3">
                             <option value="">Select a car</option>
@@ -142,6 +162,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car4" id="car4-try3">
                             <option value="">Select a car</option>
@@ -151,6 +173,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                     </div>
                     <div class="points">
@@ -168,6 +192,8 @@
                             <option value="pink"> Pink</option>
                             <option value="blue"> Blue</option>
                             <option value="orange"> Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car2" id="car2-try4">
                             <option value="">Select a car</option>
@@ -177,6 +203,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car3" id="car3-try4">
                             <option value="">Select a car</option>
@@ -186,6 +214,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car4" id="car4-try4">
                             <option value="">Select a car</option>
@@ -195,6 +225,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                     </div>
                     <div class="points">
@@ -211,6 +243,8 @@
                         <option value="pink"> Pink</option>
                         <option value="blue"> Blue</option>
                         <option value="orange"> Orange</option>
+                        <option value="lime">Lime</option>
+                        <option value="purple">Purple</option>
                     </select>
                     <select class="car-dropdown" name="car2" id="car2-try5">
                         <option value="">Select a car</option>
@@ -220,6 +254,8 @@
                         <option value="pink">Pink</option>
                         <option value="blue">Blue</option>
                         <option value="orange">Orange</option>
+                        <option value="lime">Lime</option>
+                        <option value="purple">Purple</option>
                     </select>
                     <select class="car-dropdown" name="car3" id="car3-try5">
                         <option value="">Select a car</option>
@@ -229,6 +265,8 @@
                         <option value="pink">Pink</option>
                         <option value="blue">Blue</option>
                         <option value="orange">Orange</option>
+                        <option value="lime">Lime</option>
+                        <option value="purple">Purple</option>
                     </select>
                     <select class="car-dropdown" name="car4" id="car4-try5">
                         <option value="">Select a car</option>
@@ -238,6 +276,8 @@
                         <option value="pink">Pink</option>
                         <option value="blue">Blue</option>
                         <option value="orange">Orange</option>
+                        <option value="lime">Lime</option>
+                        <option value="purple">Purple</option>
                     </select></div>
                     <div class="points">
                         <div class="points-color" id="points-color-5"></div>
@@ -254,6 +294,8 @@
                             <option value="pink"> Pink</option>
                             <option value="blue"> Blue</option>
                             <option value="orange"> Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car2" id="car2-try6">
                             <option value="">Select a car</option>
@@ -263,6 +305,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car3" id="car3-try6">
                             <option value="">Select a car</option>
@@ -272,6 +316,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car4" id="car4-try6">
                             <option value="">Select a car</option>
@@ -281,6 +327,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                     </div>
                     <div class="points">
@@ -298,6 +346,8 @@
                             <option value="pink"> Pink</option>
                             <option value="blue"> Blue</option>
                             <option value="orange"> Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car2" id="car2-try7">
                             <option value="">Select a car</option>
@@ -307,6 +357,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car3" id="car3-try7">
                             <option value="">Select a car</option>
@@ -316,6 +368,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car4" id="car4-try7">
                             <option value="">Select a car</option>
@@ -325,6 +379,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                     </div>
                     <div class="points">
@@ -342,6 +398,8 @@
                             <option value="pink"> Pink</option>
                             <option value="blue"> Blue</option>
                             <option value="orange"> Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car2" id="car2-try8">
                             <option value="">Select a car</option>
@@ -351,6 +409,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car3" id="car3-try8">
                             <option value="">Select a car</option>
@@ -360,6 +420,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car4" id="car4-try8">
                             <option value="">Select a car</option>
@@ -369,6 +431,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                     </div>
                     <div class="points">
@@ -386,6 +450,8 @@
                             <option value="pink"> Pink</option>
                             <option value="blue"> Blue</option>
                             <option value="orange"> Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car2" id="car2-try9">
                             <option value="">Select a car</option>
@@ -395,6 +461,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car3" id="car3-try9">
                             <option value="">Select a car</option>
@@ -404,6 +472,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car4" id="car4-try9">
                             <option value="">Select a car</option>
@@ -413,6 +483,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                     </div>
                     <div class="points">
@@ -430,6 +502,8 @@
                             <option value="pink"> Pink</option>
                             <option value="blue"> Blue</option>
                             <option value="orange"> Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car2" id="car2-try10">
                             <option value="">Select a car</option>
@@ -439,6 +513,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car3" id="car3-try10">
                             <option value="">Select a car</option>
@@ -448,6 +524,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                         <select class="car-dropdown" name="car4" id="car4-try10">
                             <option value="">Select a car</option>
@@ -457,6 +535,8 @@
                             <option value="pink">Pink</option>
                             <option value="blue">Blue</option>
                             <option value="orange">Orange</option>
+                            <option value="lime">Lime</option>
+                            <option value="purple">Purple</option>
                         </select>
                     </div>
                     <div class="points">
@@ -469,7 +549,7 @@
                     <div class="cars-row" id="pattern"></div>
                 </div>
             </div>
-            <button class="guess-button" id="guess-button">Submit Guess</button>
+            <button class="guess-button" id="guess-button">Guess!</button>
             <button class="play-again-button" id="play-again-button" onClick="window.location.reload()">Play Again!</button>
         </div>
        

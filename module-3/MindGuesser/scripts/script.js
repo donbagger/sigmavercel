@@ -1,8 +1,38 @@
 document.addEventListener("DOMContentLoaded", function () {
     let randomPattern = [];
 
+    function chooseDifficulty (){
+        document.getElementById('start-button').style.display = "flex" ;
+        // document.getElementById('diffDiv').style.display = "none" ;
+
+    }
+    document.getElementById('diffNormal').addEventListener('click', chooseDifficulty);
+    document.getElementById('diffHard').addEventListener('click', chooseDifficulty);
+    document.getElementById('diffImpossible').addEventListener('click', chooseDifficulty);
+
+    const options = document.querySelectorAll('.diff');
+
+
+    options.forEach(option => {
+        option.addEventListener('click', (e) => {
+            const parent = e.target.closest('.difficulty'); // Get the question container
+            // Remove active class from all buttons in the same question
+            parent.querySelectorAll('.diff').forEach(btn => btn.classList.remove('selected'));
+    
+            // Add selected class to the clicked button
+            e.target.classList.add('selected');
+        });
+    });
+
     // Function to place hidden cars in the pattern row
     function startGame() {
+
+        const selectedButton = document.querySelector('.difficulty .selected');
+        const selectedDifficulty = selectedButton.id;
+        console.log("Selected Difficulty ID:", selectedDifficulty);
+        document.getElementById('diffDiv').style.display = "none" ;
+
+
 
         document.getElementById('pattern-container').style.display = 'flex'; 
         document.getElementById('attempt-1').classList.add('show'); // Show the first attempt
@@ -10,7 +40,9 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById('guess-button').style.display = 'flex'; 
         const patternRow = document.getElementById('pattern'); // Select the pattern row container
         patternRow.innerHTML = ''; // Clear any existing content in the pattern row
-        randomPattern = createRandomPattern();
+        randomPattern = createRandomPattern(selectedDifficulty);
+        adjustDropdownsForDifficulty(selectedDifficulty);
+        
 
         // Add 4 hidden cars to the pattern row
         for (let i = 0; i < 4; i++) {
@@ -24,6 +56,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Event listener for the Start button
     document.getElementById('start-button').addEventListener('click', startGame);
+
+    function adjustDropdownsForDifficulty(selectedDifficulty) {
+        const dropdowns = document.querySelectorAll(".car-dropdown");
+
+        dropdowns.forEach(dropdown => {
+            const limeOption = dropdown.querySelector("option[value='lime']");
+            const purpleOption = dropdown.querySelector("option[value='purple']");
+
+            if (selectedDifficulty === 'diffNormal') {
+                // Hide both lime and purple
+                if (limeOption) limeOption.style.display = 'none';
+                if (purpleOption) purpleOption.style.display = 'none';
+            } else if (selectedDifficulty === 'diffHard') {
+                // Hide only purple
+                if (limeOption) limeOption.style.display = 'block'; // Ensure lime is visible
+                if (purpleOption) purpleOption.style.display = 'none'; // Hide purple
+            } else if (selectedDifficulty === 'diffImpossible') {
+                // Show all options
+                if (limeOption) limeOption.style.display = 'block';
+                if (purpleOption) purpleOption.style.display = 'block';
+            }
+        });
+    }
 
     // Function to handle dropdown change and replace dropdown with image
     function handleDropdownChange(event) {
@@ -47,24 +102,32 @@ document.addEventListener("DOMContentLoaded", function () {
         dropdown.addEventListener("change", handleDropdownChange);
     });
 
-    function createRandomPattern() {
-        const firstCar = Math.floor(Math.random() * 6) + 1;
-        const secondCar = Math.floor(Math.random() * 6) + 1;
-        const thirdCar = Math.floor(Math.random() * 6) + 1;
-        const fourthCar = Math.floor(Math.random() * 6) + 1;
+    function createRandomPattern(selectedDifficulty) {
+        let carColors = [];
+        let pattern = [];
 
-        const carColors = ["", "red", "green", "blue", "orange", "pink", "yellow"]; 
+      
 
-        const pattern = [
-            carColors[firstCar],
-            carColors[secondCar],
-            carColors[thirdCar],
-            carColors[fourthCar]
-        ];
+        if (selectedDifficulty === 'diffNormal') {
+            carColors = ["", "red", "green", "blue", "orange", "pink", "yellow"];
+        } else if (selectedDifficulty === 'diffHard') {
+            carColors = ["", "red", "green", "blue", "orange", "pink", "yellow", "lime"];
+        } else if (selectedDifficulty === 'diffImpossible') {
+            carColors = ["", "red", "green", "blue", "orange", "pink", "yellow", "lime", "purple"];
+        }
 
-       // console.log("Generated Pattern:", pattern); <- this displays the pattern in console
+        for (let i = 0; i < 4; i++) {
+            const randomIndex = Math.floor(Math.random() * (carColors.length - 1)) + 1;
+            pattern.push(carColors[randomIndex]);
+        }
+
+   
+
+      //  console.log("Generated Pattern:", pattern); // <- this displays the pattern in console
         return pattern;
-    }
+    } 
+    
+    
 
     let currentAttemptNumber = 1; // Track the current attempt (start from 1)
 
