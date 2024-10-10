@@ -19,6 +19,28 @@ body {
     background-color:var(--primary-color)
 }
 
+.answer {
+    padding: 10px 10px;
+    font-size: 15px;
+    margin: 10px;
+    margin-bottom:30px;
+    color:black;
+    cursor: pointer;
+    border: 1px solid #333;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2)
+    
+}
+
+button.answer.selected {
+    background-color: #565656; 
+    color: white;
+    border: 2px solid #2c1737;
+    box-shadow:5px 5px 5px #6c6c6c;
+
+}
+
 
 
 
